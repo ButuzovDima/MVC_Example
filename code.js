@@ -12,8 +12,7 @@ let model = {
     number: 0,
     calculate: function(x, y){
         this.number = x*y;
-        let result = this.number;
-        view.showNumber(result);
+        return this.number;
     }
 };
 /*---------------------------end model---------------------------*/
@@ -21,7 +20,8 @@ let model = {
 /*---------------------------begin controller---------------------------*/
 let controller = {
     handleClick: function(){
-        model.calculate(3,4);
+        let result = model.calculate(3,4);
+        view.showNumber(result);
     }
 };
 /*---------------------------end controller---------------------------*/
